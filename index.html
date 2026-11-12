@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>夥伴成長樹｜堡家衛國</title>
+<meta name="description" content="堡家衛國夥伴成長樹：夥伴資料、我的團隊、全息圖、晉升進度">
+<!-- 加到手機桌面：圖示＝世界樹徽章、名稱＝夥伴成長樹 -->
+<meta name="apple-mobile-web-app-title" content="夥伴成長樹">
+<meta name="application-name" content="夥伴成長樹">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#fbf7ee">
+<link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+  html, body { margin: 0; height: 100%; background: #fbf7ee; }
+  iframe { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; }
+  .fallback { font: 16px/1.6 system-ui, sans-serif; color: #7a5a1e; text-align: center; padding: 40px 16px; }
+  .fallback a { color: #7a5a1e; }
+</style>
+</head>
+<body>
+<iframe id="app" title="夥伴成長樹" allow="clipboard-write"></iframe>
+<noscript><div class="fallback">請開啟 JavaScript，或直接前往<a href="https://script.google.com/macros/s/AKfycbyUOVXhIjlAD3TulYp2ksuNWOJOVG4Z8IjBXLjkAFV0t-QxYTspNFN2Y_Q2RS8uv6iI/exec">夥伴成長樹</a></div></noscript>
+<script>
+  // 夥伴成長樹（Google Apps Script 網頁應用程式）的網址；重建部署時要一起改
+  var EXEC = 'https://script.google.com/macros/s/AKfycbyUOVXhIjlAD3TulYp2ksuNWOJOVG4Z8IjBXLjkAFV0t-QxYTspNFN2Y_Q2RS8uv6iI/exec';
+  // ?p=coach → 遊錢圖教練頁
+  var p = new URLSearchParams(location.search).get('p');
+  document.getElementById('app').src = EXEC + (p === 'coach' ? '?p=coach' : '');
+</script>
+</body>
+</html>
