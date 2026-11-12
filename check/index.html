@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>3 分鐘財務健康檢測｜堡家衛國</title>
+<meta name="description" content="回答 8 題，馬上知道自己的財務健康落在哪一區、下一步從哪裡開始。免登入，不問帳號與證件。">
+<!-- LINE／FB 分享預覽 -->
+<meta property="og:title" content="3 分鐘財務健康檢測">
+<meta property="og:description" content="你的錢，現在是幫你工作，還是讓你焦慮？回答 8 題，馬上知道自己落在哪一區。">
+<meta property="og:image" content="https://lanmoon3469-del.github.io/growth-tree/icon-512.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#fbf7ee">
+<link rel="icon" type="image/png" sizes="32x32" href="../icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../icon-180.png">
+<style>
+  html, body { margin: 0; height: 100%; background: #fbf7ee; }
+  iframe { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; }
+</style>
+</head>
+<body>
+<iframe id="app" title="3 分鐘財務健康檢測"></iframe>
+<script>
+  // 夥伴成長樹（Google Apps Script）的網址；重建部署時要一起改
+  var EXEC = 'https://script.google.com/macros/s/AKfycbyUOVXhIjlAD3TulYp2ksuNWOJOVG4Z8IjBXLjkAFV0t-QxYTspNFN2Y_Q2RS8uv6iI/exec';
+  // ?r=夥伴代碼（6 碼）→ 名單記在該夥伴名下
+  var r = new URLSearchParams(location.search).get('r') || '';
+  document.getElementById('app').src = EXEC + '?p=check' + (/^[A-Za-z0-9]{6}$/.test(r) ? '&r=' + r : '');
+</script>
+</body>
+</html>
